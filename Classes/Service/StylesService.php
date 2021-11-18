@@ -59,7 +59,7 @@ class StylesService
         // Construct full CSS selector
         $pathName = join(array_map(function ($part) {
             return strpos($part, '@') === 0 ? $part . '{' : $part;
-        }, $path), ' ');
+        }, $path));
         $pathName = str_replace('{ ', '{', $pathName);
 
         $subSelectors = [];
